@@ -1,0 +1,29 @@
+.h2 {
+    font-family: 'Constantine';
+    @include fonty(1rem, 400, 1.2rem);
+    color: $h2-color;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 25%;
+        height: 1px;
+        background-color: $title-line-color;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+    &::after {
+        content: '';
+        width: 25%;
+        height: 1px;
+        background-color: $title-line-color;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+}
+
+// mixin that will calculate font-size shall be implemented!
