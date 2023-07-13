@@ -2,7 +2,7 @@
     font-family: 'Constantine';
     font-weight: 400;
     src: local('Constantine'),
-        url('/src/font/Constantine.woff2') format('woff2'),
+        url('/s/font/Constantine.woff2') format('woff2'),
         url('/src/font/Constantine.woff') format('woff');
 }
 
@@ -51,4 +51,9 @@ a {
     text-decoration: none;
     @include fonty(0.875rem, 400, 0.875rem);
     color: $font-color;
+}
+
+.container {
+    //mobile version according to task is 262px..264px
+    @include centry(81.875%);
 }

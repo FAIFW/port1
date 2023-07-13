@@ -1,0 +1,33 @@
+.contact-badge {
+    @include flexy(column, space-between, flex-start);
+    gap: 10px;
+
+    &__item {
+        border: $myBorder;
+
+        p:first-child {
+            @include fonty(0.875rem, 600, 0.1rem);
+            position: relative;
+        }
+
+        p:nth-child(2) {
+            @include fonty(0.75rem, 400, 0.1rem);
+        }
+    }
+
+    &__address {
+        p:first-child {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: -10px;
+                width: 16px;
+                height: 16px;
+                background-image: url('/src/img/header/location-pointer.svg');
+
+            }
+        }
+    }
+}
