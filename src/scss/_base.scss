@@ -47,6 +47,12 @@ body {
     background-color: $bg-color;
 }
 
+.stop-scroll {
+    background-color: $stop-scroll-color;
+    overflow: hidden;
+}
+
+
 a {
     text-decoration: none;
     @include fonty(0.875rem, 400, 0.875rem);

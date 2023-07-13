@@ -1,43 +1,63 @@
 .header {
-    padding: 20px 0;
-    background-color: $header-bg;
-    height: 387px;
+    height: 60px;
+    position: relative;
 
-    .nav {
-        width: 100%;
-        @include flexy(column, space-between, flex-start);
-        //padding-bottom: 15px;
+    ul {
+        margin: 0 0;
+        padding: 0 0;
 
-        &__link {
-            @include fonty(0.875rem, 600, 1.35rem);
-
-            /* for PC
-                &-active {
-                    border: 3px solid #825890;
-                    border-radius: 50px;
-                    padding: 5px 16px;
-                    position: relative;
-        
-                    &::after {
-                        //content: url("/src/images/header/drops.png");
-                        //content: url("../../images/header/drops.png");
-                        content: "";
-                        position: absolute;
-                        top: 100%;
-                        left: 63%;
-        
-                        width: 38px;
-                        height: 80px;
-                        //background-image: url("../../images/header/drops.png");
-                        background-image: url("/src/images/header/drops.png");
-                        background-size: 38px 80px;
-                    }
-                }
-                */
+        li {
+            list-style-type: none;
         }
     }
 
-    @import '../blocks/contact-badge';
-    @import '../blocks/socials';
+    .nav {
+        width: 100vw;
+        padding: 20px 20px;
+        background-color: $header-bg;
+        border: $header-border;
+        box-shadow: $header-shadow;
+        transform: translateY(-100vh);
+        transition: transform 0.5s;
 
+        &_active {
+            transform: translateY(0);
+            transition: transform 0.5s;
+        }
+    }
+
+    .nav__list {
+        width: 100%;
+        padding-bottom: 15px;
+
+
+    }
+
+    .nav__link {
+        @include fonty(0.875rem, 600, 1.35rem);
+
+        /* for PC
+            &-active {
+                border: 3px solid #825890;
+                border-radius: 50px;
+                padding: 5px 16px;
+                position: relative;
+    
+                &::after {
+                    //content: url("/src/images/header/drops.png");
+                    //content: url("../../images/header/drops.png");
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 63%;
+    
+                    width: 38px;
+                    height: 80px;
+                    //background-image: url("../../images/header/drops.png");
+                    background-image: url("/src/images/header/drops.png");
+                    background-size: 38px 80px;
+                }
+            }
+            */
+    }
 }
