@@ -42,4 +42,17 @@
   });
 })();
 
+//removing blocks with H1 and check-in button
+
+const firstTop = document.querySelector('.first__top');
+const checkIn = document.querySelector('.first__check-in');
+
+const leftSide = document.querySelector('.first__left-side');
+
+
+console.log(leftSide);
+leftSide.prepend(firstTop);
+leftSide.appendChild(checkIn);
+
+
 
