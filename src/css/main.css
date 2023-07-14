@@ -363,16 +363,17 @@ template {
   font-weight: 700;
   src: local("Manrope-Medium"), url("/src/font/Manrope-Bold.woff2") format("woff2"), url("/src/font/Manrope-Bold.woff") format("woff");
 }
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 body {
   font-family: Manrope;
   font-size: 14px;
   font-weight: 400;
   color: rgb(34, 8, 43);
   background-color: rgb(243, 243, 243);
-}
-
-.stop-scroll {
-  overflow: hidden;
 }
 
 a {
@@ -383,15 +384,27 @@ a {
   color: rgb(34, 8, 43);
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   width: 81.875%;
 }
 
+section,
+footer {
+  height: 720px;
+  border: 2px solid red;
+}
+
 .header {
-  height: 60px;
-  position: relative;
+  width: 100%;
+  height: 140px;
+  position: fixed;
   z-index: 1;
+  background-color: rgb(243, 243, 243);
 }
 .header_active {
   height: 100vh;
@@ -445,7 +458,6 @@ a {
     transition: transform 0.5s;
   }
   .header .nav__list {
-    width: 67.3%;
     padding: 50px 0;
     display: flex;
     flex-direction: row;
@@ -453,25 +465,31 @@ a {
     align-items: center;
   }
   .header .nav__link {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 41px;
+    font-size: calc(14px + 16 * (100vw - 768px) / 1920);
   }
-  .header .nav__link-active {
+  .header .nav__link_active {
     border: 3px solid #825890;
     border-radius: 50px;
     padding: 5px 16px;
     position: relative;
   }
-  .header .nav__link-active::after {
+  .header .nav__link_active::after {
     content: "";
     position: absolute;
     top: 100%;
-    left: 63%;
+    left: 53%;
     width: 38px;
     height: 80px;
     background-image: url("../img/header/drops.png");
     background-size: 38px 80px;
+  }
+  .header .nav .contact-badge {
+    display: none;
+  }
+}
+@media (min-width: 930px) {
+  .header .nav__list {
+    width: 67.3%;
   }
   .header .nav__contacts {
     display: initial;
@@ -485,9 +503,6 @@ a {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
-  }
-  .header .nav .contact-badge {
-    display: none;
   }
 }
 
