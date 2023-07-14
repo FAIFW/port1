@@ -39,6 +39,13 @@
         url('/src/font/Manrope-Bold.woff') format('woff');
 }
 
+html {
+    //чтобы убрать прыгающий скролл
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+
 body {
     font-family: Manrope;
     font-size: 14px;
@@ -47,18 +54,23 @@ body {
     background-color: $bg-color;
 }
 
-.stop-scroll {
-    overflow: hidden;
-}
-
-
 a {
     text-decoration: none;
     @include fonty(0.875rem, 400, 0.875rem);
     color: $font-color;
 }
 
+.stop-scroll {
+    overflow: hidden;
+}
+
 .container {
     //mobile version according to task is 262px..264px
     @include centry(81.875%);
+}
+
+section,
+footer {
+    height: 720px;
+    border: $myBorder;
 }

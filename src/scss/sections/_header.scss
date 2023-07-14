@@ -1,7 +1,9 @@
 .header {
-    height: 60px;
-    position: relative;
+    width: 100%;
+    height: 140px;
+    position: fixed;
     z-index: 1;
+    background-color: $bg-color;
 
     &_active {
         height: 100vh;
@@ -44,6 +46,7 @@
 
         &__link {
             @include fonty(0.875rem, 600, 1.35rem);
+
         }
     }
 
@@ -60,15 +63,16 @@
             transition: transform 0.5s;
 
             &__list {
-                width: 67.3%;
+
                 padding: 50px 0;
                 @include flexy(row, space-between);
             }
 
             &__link {
-                @include fonty(30px, 600, 41px);
+                //@include fonty(30px, 600, 41px);
+                font-size: calc(14px + 16 * ((100vw - 768px) / 1920));
 
-                &-active {
+                &_active {
                     border: 3px solid #825890;
                     border-radius: 50px;
                     padding: 5px 16px;
@@ -78,7 +82,7 @@
                         content: "";
                         position: absolute;
                         top: 100%;
-                        left: 63%;
+                        left: 53%;
 
                         width: 38px;
                         height: 80px;
@@ -88,24 +92,30 @@
                 }
             }
 
-            &__contacts {
-                display: initial;
+            .contact-badge {
+                display: none;
+            }
+        }
+    }
 
-                li:first-child {
-                    span {
-                        @include fonty(22px, 600);
-                    }
-                }
+    @media(min-width: 930px) {
+        .nav__list {
+            width: 67.3%;
+        }
 
-                li:nth-child(2) {
-                    span {
-                        @include fonty(18px, 400);
-                    }
+        .nav__contacts {
+            display: initial;
+
+            li:first-child {
+                span {
+                    @include fonty(22px, 600);
                 }
             }
 
-            .contact-badge {
-                display: none;
+            li:nth-child(2) {
+                span {
+                    @include fonty(18px, 400);
+                }
             }
         }
     }
