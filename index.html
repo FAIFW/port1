@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <div class="modalBackground">
+        <div class="modalActive">
+            <div class="modalClose"></div>
+            <div class="modalWindow"></div>
+        </div>
+    </div>
     <header class="header">
         <div class="burger">
             <span></span>
@@ -17,92 +23,87 @@
         </div>
         <nav class="nav">
             <ul class="nav__list">
-                <li><a href="#first" class="nav__link nav__link_active">Главная</a></li>
-                <li><a href="#about" class="nav__link">Обо мне</a></li>
-                <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
-                <li><a href="#services" class="nav__link">Услуги</a></li>
-                <li><a href="#memo" class="nav__link">Памятки</a></li>
-                <li><a href="#reviews" class="nav__link">Отзывы</a></li>
-                <li><a href="#contacts" class="nav__link">Контакты</a></li>
+                <li><a href="#first" class="nav__link nav__link_active js-header-close">Главная</a></li>
+                <li><a href="#about" class="nav__link js-header-close">Обо мне</a></li>
+                <li><a href="#portfolio" class="nav__link js-header-close">Портфолио</a></li>
+                <li><a href="#services" class="nav__link js-header-close">Услуги</a></li>
+                <li><a href="#memo" class="nav__link js-header-close">Памятки</a></li>
+                <li><a href="#reviews" class="nav__link js-header-close">Отзывы</a></li>
+                <li><a href="#contacts" class="nav__link js-header-close">Контакты</a></li>
             </ul>
             <ul class="nav__contacts">
-                <li><a class="contact-badge__item" href="tel:79600330101"><span>8-960-033-01-01</span>
-                        <img class="contact-badge__icon" src="./src/img/header/phone.svg" alt="phone"></a></li>
-                <li><a class="contact-badge__item contact-badge__address" href="#"><span>Г. Казань, Айвазовского 10/54</span>
-                        <img class="contact-badge__icon" src="./src/img/header/location-pointer.svg" alt="location"></a></li>
+                <li><a class="contact-badge__item" href="tel:79600330101"><img class="contact-badge__icon" src="./src/img/header/phone.svg" alt="phone">
+                        <span>8-960-033-01-01</span>
+                    </a></li>
+                <li><a class="contact-badge__item" href="#"><img class="contact-badge__icon" src="./src/img/header/location-pointer.svg" alt="location">
+                        <span>Г. Казань, Айвазовского 10/54</span>
+                    </a></li>
             </ul>
             <div class="contact-badge">
-                <a class="contact-badge__item contact-badge__address" href="#">
+                <a class="contact-badge__item js-header-close" href="https://goo.gl/maps/AcZq1Pf4cUV465kx8">
                     <p>Адрес студии:</p>
                     <p>Г. Казань, Айвазовского 10/54</p>
                     <img class="contact-badge__icon" src="./src/img/header/location-pointer.svg" alt="location">
                 </a>
-                <div class="contact-badge__item contact-badge__schedule">
+                <div class="contact-badge__item">
                     <p>График работы</p>
                     <p>Ежедневно 12:00 - 19:00</p>
                     <img class="contact-badge__icon" src="./src/img/header/clockIcon.svg" alt="schedule">
                 </div>
-                <a class="contact-badge__item contact-badge__phone" href="tel:+79600330101">
+                <a class="contact-badge__item js-header-close" href="tel:+79600330101">
                     <p>Связь со мной</p>
                     <p>8-960-033-01-01</p>
                     <img class="contact-badge__icon" src="./src/img/header/phone.svg" alt="phone">
                 </a>
                 <div class="socials">
-                    <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/img/header/telegramm.svg" alt="telegramm"></a>
+                    <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/img/header/telegramm.svg" alt="телеграмм"></a>
                     <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/img/header/what'sUpIcon.svg" alt="what's up"></a>
-                    <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/img/header/instagramm.svg" alt="Instagramm"></a>
-                    <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/img/header/vk-icon.svg" alt="Vk"></a>
+                    <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/img/header/instagramm.svg" alt="Инстаграмм"></a>
+                    <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/img/header/vk-icon.svg" alt="Вконтакте"></a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <section id="first" class="first js-section">
-            <div class="first__container">
-
+            <div class="first__wrapper">
                 <div class="first__top">
-                    <img src="./src/img/first/tattoo-logo.svg" alt="">
+                    <h2>tattoo</h2>
                     <p class="first__subtitle">В акварельном стиле</p>
                 </div>
-
-                <div class="first__girl">
-                    <picture>
-                        <img src="./src/img/first/girl.png" alt="тату салон">
-                    </picture>
-                    <div class="socials first__socials">
+                <div class="girl">
+                    <div class="girl__wrapper">
+                        <h1>t<br>a<br>t<br>t<br>o<br>o</h1>
+                        <div class="girl__border">
+                            <picture>
+                                <source type="image/png" srcset="./src/img/first/girl.png">
+                                <source type="image/webp" srcset="./src/img/first/girl.webp">
+                                <img src="./src/img/first/girl.png" alt="Тату салон">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="socials">
                         <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/img/header/telegramm.svg" alt="telegramm"></a>
                         <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/img/header/what'sUpIcon.svg" alt="what's up"></a>
                         <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/img/header/instagramm.svg" alt="Instagramm"></a>
                         <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/img/header/vk-icon.svg" alt="Vk"></a>
                     </div>
                 </div>
-
                 <div class="first__left-side">
                     <picture class="first__img">
-                        <img src="./src/img/first/tube-phone.png" alt="">
+                        <source type="image/png" srcset="./src/img/first/tube.png">
+                        <source type="image/webp" srcset="./src/img/first/tube.webp">
+                        <img src="./src/img/first/tube.png" alt="Тату салон">
                     </picture>
                 </div>
-
-
                 <div class="first__check-in">
                     <p class="first__text">Для тех, кто уверен в&nbsp;своих решениях</p>
-                    <a href="">Записаться на сеанс</a>
+                    <a href="https://wa.me/+79600330101" class="check-in-link">Записаться на сеанс</a>
                 </div>
-
-
-
             </div>
-
         </section>
         <section id="about" class="js-section"></section>
-        <section id="portfolio" class="js-section">
-            <div class="socials">
-                <a href="https://t.me/dinasynthetica" class="socails__item"><img src="./src/img/header/telegramm.svg" alt="telegramm"></a>
-                <a href="https://wa.me/+79600330101" class="socails__item"><img src="./src/img/header/what'sUpIcon.svg" alt="what's up"></a>
-                <a href="https://instagram.com/dina.synthetica?igshid=NjIwNzIyMDk2Mg==" class="socails__item"><img src="./src/img/header/instagramm.svg" alt="Instagramm"></a>
-                <a href="https://vk.com/dina_synthetica_tattoo" class="socails__item"><img src="./src/img/header/vk-icon.svg" alt="Vk"></a>
-            </div>
-        </section>
+        <section id="portfolio" class="js-section"></section>
         <section id="services" class="js-section"></section>
         <section id="memo" class="js-section"></section>
         <section id="reviews" class="js-section"></section>

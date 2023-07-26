@@ -2,8 +2,10 @@
     font-family: 'Constantine';
     font-weight: 400;
     src: local('Constantine'),
-        url('/s/font/Constantine.woff2') format('woff2'),
-        url('/src/font/Constantine.woff') format('woff');
+        url('/src/font/Constantine.woff') format('woff'),
+        url('/src/font/Constantine.woff2') format('woff2');
+    //url('/src/font/Constantine.woff2') format('woff2'),
+    //url('/src/font/Constantine.woff') format('woff');
 }
 
 @font-face {
@@ -36,6 +38,20 @@
     src: local('Manrope-Medium'),
         url('/src/font/Manrope-Bold.woff2') format('woff2'),
         url('/src/font/Manrope-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Intro';
+    font-weight: 900;
+    src: local('Manrope-Medium'),
+        url('/src/font/Intro.woff2') format('woff2'),
+        url('/src/font/Intro.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {

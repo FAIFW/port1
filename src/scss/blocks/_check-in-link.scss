@@ -1,0 +1,8 @@
+.check-in-link {
+    text-align: center;
+    width: calc(224px + 227 * (100vw - 320px) / 1920);
+    max-width: 451px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(166, 113, 244, 1.0);
+}
