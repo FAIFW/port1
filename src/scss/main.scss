@@ -4,14 +4,13 @@
 @import './mixins';
 @import './base';
 
-// Sections
-@import './sections/header';
-
-
 // Blocks
 @import './blocks/burger';
 @import './blocks/contact-badge';
 @import './blocks/socials';
+@import './blocks/check-in-link';
 @import './blocks/h2';
-//@import './blocks/contact-badge';
-//@import './blocks/socials';
+
+// Sections
+@import './sections/header';
+@import './sections/first';

@@ -5,9 +5,11 @@
     &__item {
         padding-left: 20px;
         position: relative;
+        color: #22082b;
+        font-family: Manrope;
 
         img {
-            content: '';
+            content: "";
             position: absolute;
             top: 10%;
             left: 0%;
@@ -16,13 +18,24 @@
         }
 
         p:first-child {
-            @include fonty(0.875rem, 600, 0.1rem);
-            position: relative;
+            @include fonty(14px, 600, 19px);
         }
 
         p:nth-child(2) {
-            @include fonty(0.75rem, 400, 0.1rem);
+            @include fonty(12px, 400, 14px);
         }
     }
+}
 
+@media (min-width: 768px) {
+    .header .contact-badge {
+        &__item {
+            @include flexy(row, flex-start);
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
 }
