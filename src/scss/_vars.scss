@@ -1,26 +1,27 @@
 //colors
-$bg-color: rgba(243, 243, 243, 1.0);
+$bgColor: rgba(243, 243, 243, 1.0);
 
 
-$header-bg: rgba(214, 205, 217, 1.0);
-$header-border: rgba(130, 88, 144, 1.0);
-$header-shadow: 0px 4px 4px 0px rgba(130, 88, 144, 0.25);
+$headerBgColor: rgba(214, 205, 217, 1.0);
+$headerBorder: rgba(130, 88, 144, 1.0);
+$headerShadow: 0px 4px 4px 0px rgba(130, 88, 144, 0.25);
 
-$stop-scroll-color: rgba(226, 226, 226, 0.7);
+$stopScrollColor: rgba(226, 226, 226, 0.7);
 
 //checkInLink color is about:
 $check-in-color: rgba(166, 113, 244, 1.0);
 
 $h2-color: rgba(0, 0, 0, 1.0);
 
-$title-line-color: #825890;
+$titleLineColor: #825890;
 
 //all the text on the page was made in this color:
-$font-color: rgba(34, 8, 43, 1.0);
+$fontColor: rgba(34, 8, 43, 1.0);
 
 //the color of dies in memo, about sections and contactsBadge
 //$die-color: rgba(218, 185, 235, 0.5);
-$die-color: #DAB9EB;
+$dieColor: rgba(218, 185, 235, 0.5);
+$dieUpSize: calc(53px + 31 * ((100vw - 320px) / 1920));
 
 $footer-bg: rgba(233, 204, 249, 0.5);
 

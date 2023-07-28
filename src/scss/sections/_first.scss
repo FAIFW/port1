@@ -8,13 +8,13 @@
 
         h2 {
             font-family: 'Intro';
-            font-size: 32px;
+            font-size: 4rem;
             color: rgba(166, 113, 244, 1.0);
         }
     }
 
     &__subtitle {
-        @include fonty(16px, 500, 21px);
+        @include fonty(1rem, 500);
         text-align: center;
     }
 
@@ -44,9 +44,9 @@
 
         h1 {
             font-family: 'Constantine';
-            font-size: calc(25px + 45 * ((100vw - 320px) / 1920));
+            font-size: calc(25px + 55 * ((100vw - 320px) / 1920));
             font-weight: 400;
-            line-height: calc(32px + 48 * ((100vw - 320px) / 1920));
+            line-height: calc(32px + 64 * ((100vw - 320px) / 1920));
             text-transform: uppercase;
             padding-right: 5px;
             color: rgba(86, 38, 103, 1.0);
@@ -93,7 +93,7 @@
             content: '';
             width: calc(47px + 138 * ((100vw - 320px) / 1920));
             height: 1px;
-            background-color: $title-line-color;
+            background-color: $titleLineColor;
             position: absolute;
             bottom: calc(140px + 230 * ((100vw - 320px) / 1920));
             transform: rotate(90deg);
@@ -103,7 +103,7 @@
             content: '';
             width: calc(47px + 138 * ((100vw - 320px) / 1920));
             height: 1px;
-            background-color: $title-line-color;
+            background-color: $titleLineColor;
             position: absolute;
             top: calc(140px + 230 * ((100vw - 320px) / 1920));
             transform: rotate(90deg);

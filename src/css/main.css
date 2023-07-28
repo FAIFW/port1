@@ -376,8 +376,7 @@ template {
 }
 
 html {
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+  font-size: 16px;
 }
 
 body {
@@ -392,6 +391,16 @@ main {
   padding-top: 60px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
   font-size: 0.875rem;
@@ -402,11 +411,6 @@ a {
 
 .stop-scroll {
   overflow: hidden;
-}
-
-.container {
-  margin: 0 auto;
-  width: 81.875%;
 }
 
 picture {
@@ -532,16 +536,16 @@ picture img {
 
 .h2 {
   font-family: "Constantine";
-  font-size: 1rem;
+  font-size: 2.18rem;
   font-weight: 400;
-  line-height: 1.2rem;
+  line-height: 2.6rem;
   color: rgb(0, 0, 0);
   text-align: center;
   position: relative;
 }
 .h2::before {
   content: "";
-  width: 25%;
+  width: 33%;
   height: 1px;
   background-color: #825890;
   position: absolute;
@@ -550,12 +554,68 @@ picture img {
 }
 .h2::after {
   content: "";
-  width: 25%;
+  width: 33%;
   height: 1px;
   background-color: #825890;
   position: absolute;
   top: 50%;
   left: 0;
+}
+
+.die {
+  height: 164px;
+  border-radius: 10px;
+  background-color: rgba(218, 185, 235, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding-top: calc((53px + 31 * (100vw - 320px) / 1920) / 2.3);
+}
+.die::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2%;
+  right: 0;
+  margin: auto;
+  width: 104%;
+  height: 112%;
+  border-radius: 10px;
+  background-color: rgba(197, 192, 220, 0.2);
+}
+.die__up {
+  width: calc(53px + 31 * (100vw - 320px) / 1920);
+  height: calc(53px + 31 * (100vw - 320px) / 1920);
+  border-radius: 50%;
+  background-color: #825890;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.die__up span {
+  font-family: "Intro";
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 20% 0;
+}
+.die p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  text-align: center;
+}
+.die p:first-of-type {
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.5rem;
 }
 
 .header {
@@ -702,13 +762,13 @@ picture img {
 }
 .first__top h2 {
   font-family: "Intro";
-  font-size: 32px;
+  font-size: 4rem;
   color: rgb(166, 113, 244);
 }
 .first__subtitle {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 30px;
   text-align: center;
 }
 .first .girl {
@@ -738,9 +798,9 @@ picture img {
 }
 .first .girl h1 {
   font-family: "Constantine";
-  font-size: calc(25px + 45 * (100vw - 320px) / 1920);
+  font-size: calc(25px + 55 * (100vw - 320px) / 1920);
   font-weight: 400;
-  line-height: calc(32px + 48 * (100vw - 320px) / 1920);
+  line-height: calc(32px + 64 * (100vw - 320px) / 1920);
   text-transform: uppercase;
   padding-right: 5px;
   color: rgb(86, 38, 103);
@@ -847,4 +907,95 @@ picture img {
     justify-content: center;
     align-items: center;
   }
+}
+.about .container {
+  margin: 0 auto;
+  width: 92.1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  gap: calc(20px + 50 * (100vw - 1366px) / 554);
+}
+.about__fl-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+}
+.about__images {
+  width: 42.6%;
+  height: 34vw;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(3, 12vw);
+  gap: 30px;
+}
+.about__images picture:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.about__images picture:nth-child(2) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.about__images picture:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.about__content {
+  width: 47.8%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__content .about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding-top: 30px;
+}
+.about__content .about__text h4 {
+  font-size: 1.56rem;
+  font-weight: 400;
+  line-height: 30px;
+  display: block;
+}
+.about__content .about__badge {
+  width: 100%;
+  height: calc(250px + 100 * (100vw - 1366px) / 1920);
+  background: url("../img/about/paper.png") 50% 50%/95% 75% no-repeat;
+  position: relative;
+  right: 1vw;
+  bottom: 2.2vw;
+}
+.about__content .about__badge::before {
+  content: "";
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/about/paint.png") 0% 95%/100% 65% no-repeat;
+}
+.about__content .about__badge h3 {
+  font-family: "Constantine";
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  left: 11%;
+  bottom: 26%;
+}
+.about__gr-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

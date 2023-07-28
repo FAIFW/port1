@@ -1,0 +1,54 @@
+.die {
+    height: 164px;
+    border-radius: 10px;
+    background-color: $dieColor;
+    @include flexy(column);
+    gap: 10px;
+    position: relative;
+    padding-top: calc($dieUpSize / 2.3);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -2%;
+        right: 0;
+        margin: auto;
+        width: 104%;
+        height: 112%;
+        border-radius: 10px;
+        background-color: rgba(197, 192, 220, 0.2);
+    }
+
+    &__up {
+        width: $dieUpSize;
+        height: $dieUpSize;
+        border-radius: 50%;
+        background-color: $titleLineColor;
+        position: absolute;
+        top: -20%;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        span {
+            font-family: "Intro";
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            display: block;
+            padding: 20% 0;
+        }
+    }
+
+    p {
+        &:first-of-type {
+            @include fonty(1.18rem, 600, 1.5rem);
+        }
+
+        @include fonty(1rem, 400, 1.3rem);
+        text-align: center;
+    }
+
+}
