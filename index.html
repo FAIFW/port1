@@ -5,10 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>port1</title>
-    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/main.css" id="theme-link">
 </head>
 
 <body>
+    <button id="colorScheme">change theme
+        <style>
+            #colorScheme {
+                width: 120px;
+                height: 80px;
+                font-size: 22px;
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 15px;
+                position: fixed;
+                top: 150px;
+                left: 150px;
+            }
+        </style>
+    </button>
     <div class="modalBackground">
         <div class="modalActive">
             <div class="modalClose"></div>
