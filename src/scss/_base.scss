@@ -55,36 +55,39 @@
 }
 
 html {
-    //чтобы убрать прыгающий скролл
-    overflow-x: hidden;
-    margin-right: calc(-1 * (100vw - 100%));
+    font-size: 16px;
 }
 
 body {
     font-family: 'Manrope';
     font-size: 14px;
     font-weight: 400;
-    color: $font-color;
-    background-color: $bg-color;
+    color: $fontColor;
+    background-color: $bgColor;
 }
 
 main {
     padding-top: 60px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     @include fonty(0.875rem, 400, 0.875rem);
-    color: $font-color;
+    color: $fontColor;
 }
 
 .stop-scroll {
     overflow: hidden;
-}
-
-.container {
-    //mobile version according to task is 262px..264px
-    @include centry(81.875%);
 }
 
 picture {

@@ -3,11 +3,11 @@
 	height: 60px;
 	position: fixed;
 	z-index: 2;
-	background-color: $bg-color;
+	background-color: $bgColor;
 
 	&_active {
 		height: 100%;
-		background-color: $stop-scroll-color;
+		background-color: $stopScrollColor;
 	}
 
 	ul {
@@ -22,15 +22,15 @@
 	.nav {
 		width: 100%;
 		padding: 20px 20px;
-		background-color: $header-bg;
-		border: $header-border;
-		box-shadow: $header-shadow;
+		background-color: $headerBgColor;
+		border: $headerBorder;
+		box-shadow: $headerShadow;
 		transform: translateY(-100vh);
 		transition: transform 0.5s;
 
 		a,
 		p {
-			color: $font-color;
+			color: $fontColor;
 		}
 
 		&__contacts {
