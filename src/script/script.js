@@ -1,21 +1,5 @@
 'use strict';
 
-// theme color
-const btn = document.getElementById('colorScheme');
-const theme = document.getElementById('theme-link');
-
-btn.addEventListener('click', function () {
-  if (theme.getAttribute('href') == "./src/css/main.css") {
-    theme.href = './src/css/stupidColorTheme.css';
-  } else {
-    theme.href = './src/css/main.css';
-  }
-});
-
-
-console.log(theme);
-
-
 //burger-btn
 (function () {
   const burgerBtn = document.querySelector('.burger');
@@ -120,6 +104,3 @@ console.log(theme);
 
   return changeFirstSection();
 })();
-
-
-
