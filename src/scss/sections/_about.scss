@@ -1,4 +1,5 @@
 .about {
+    padding-bottom: 100px;
 
     .container {
         @include centry(92.1%);
@@ -85,12 +86,24 @@
         }
     }
 
-    &__gr-row {
-        //@include gridy(4, 20.4%);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 50px;
-        justify-content: space-between;
-    }
+    .about__bottom {
+        font-family: 'Constantine';
+        @include fonty(2.1rem, 400, 2.63rem);
+        text-align: center;
+        @include centry(85%);
+        padding-top: 20px;
+        position: relative;
 
+        &::before {
+            content: '';
+            width: 89vw;
+            height: 150px;
+            background: url('../img/about/shadow.png') center/contain no-repeat;
+            position: absolute;
+            bottom: -90px;
+            left: -3.84vw;
+            right: 0;
+            margin: auto;
+        }
+    }
 }
