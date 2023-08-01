@@ -1,4 +1,5 @@
-//colors
+/*---------------------COLORS-------------------------*/
+
 $bgColor: rgba(243, 243, 243, 1.0);
 
 $headerBgColor: rgba(214, 205, 217, 1.0);
@@ -23,6 +24,14 @@ $dieColor: rgba(218, 185, 235, 0.5);
 $dieUpSize: calc(53px + 31 * ((100vw - 320px) / 1920));
 
 $footer-bg: rgba(233, 204, 249, 0.5);
+
+
+/*---------------------CALCULATIONS----------------------*/
+
+//check-in-link:
+$pt-checkIn: calc(11px + 15 * ((100vw - 320px) / 1920));
+$pb-checkIn: calc(40px + 55 * ((100vw - 320px) / 1920));
+
 
 //in the purpose of webDev:
 $myBorder: 2px solid red;

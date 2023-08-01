@@ -1,8 +1,23 @@
 .check-in-link {
     text-align: center;
     width: calc(224px + 227 * (100vw - 320px) / 1920);
+    font-size: calc(14px + 11 * ((100vw - 320px) / 1920));
     max-width: 451px;
-    padding: 10px;
-    border-radius: 20px;
+    padding: $pt-checkIn $pb-checkIn;
+    border-radius: 50px;
     background-color: $check-in-color;
 }
+
+/*
+.check-in-link {
+    text-align: center;
+    //width: calc(224px + 227 * (100vw - 320px) / 1920);
+    font-size: calc(14px + 11 * ((100vw - 320px) / 1920));
+    //max-width: 451px;
+    //padding: 10px;
+    padding: 1.18em 4.32em;
+    border-radius: 50px;
+    background-color: $check-in-color;
+}
+
+*/

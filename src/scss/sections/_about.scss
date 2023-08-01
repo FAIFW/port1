@@ -4,12 +4,13 @@
     .container {
         @include centry(92.1%);
         @include flexy(column, normal, normal);
-        gap: calc(20px + 50 * ((100vw - 1366px) / 554));
+        //gap: calc(25px + 50 * ((100vw - 1366px) / 554));
 
     }
 
     &__fl-row {
         @include flexy(row, space-between, normal);
+        padding: 2rem 0;
     }
 
     &__images {
@@ -38,16 +39,16 @@
 
     &__content {
         width: 47.8%;
-        @include fonty(1.4rem, 400, 1.8rem);
+        @include fonty(1rem, 400, 1.36rem);
         @include flexy(column, space-between);
 
         .about__text {
             @include flexy(column, space-between, flex-start);
-            gap: 30px;
-            padding-top: 30px;
+            gap: 1.36rem;
+            padding-top: 1rem;
 
-            h4 {
-                @include fonty(1.56rem);
+            .about__h3 {
+                @include fonty(1.14rem);
                 display: block;
             }
         }
@@ -73,7 +74,7 @@
                 background: url('../img/about/paint.png') 0% 95% / 100% 65% no-repeat;
             }
 
-            h3 {
+            p {
                 font-family: 'Constantine';
                 text-transform: uppercase;
                 text-align: center;
@@ -86,9 +87,13 @@
         }
     }
 
+    .die-row {
+        padding: 2rem 0;
+    }
+
     .about__bottom {
         font-family: 'Constantine';
-        @include fonty(2.1rem, 400, 2.63rem);
+        @include fonty(1.45rem, 400, 1.95rem);
         text-align: center;
         @include centry(85%);
         padding-top: 20px;
@@ -104,6 +109,81 @@
             left: -3.84vw;
             right: 0;
             margin: auto;
+        }
+    }
+}
+
+@media(max-width: 1080px) {
+    .about {
+        .die-row {
+            //@include gridy(4, 20.4%);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .about__content {
+
+        .about__badge {
+            height: 100px;
+            background: none;
+            right: 0;
+            bottom: 0;
+            top: 1.6rem;
+
+            &::before {
+                height: 70%;
+                background: url('../img/about/paint.png') 100% 100% / 100% 100% no-repeat;
+            }
+
+            p {
+                font-size: 0.8rem;
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .about {
+        &__fl-row {
+            @include flexy(column, space-between, center);
+            gap: 2rem;
+        }
+
+        &__images {
+            width: initial;
+            height: 55vw;
+            display: flex;
+            gap: 4vw;
+
+            picture:nth-child(3) {
+                display: none;
+            }
+        }
+
+        &__content {
+            width: initial;
+        }
+
+        .about__bottom {
+            width: 95%;
+            @include fonty(1rem, 400, 1.2rem);
+
+        }
+    }
+}
+
+@media(max-width: 475px) {
+    .about {
+        .die-row {
+            //@include gridy(4, 20.4%);
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
