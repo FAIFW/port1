@@ -33,6 +33,106 @@
         }
     }
 
+    &-bottom {
+
+        padding: 5em 0;
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, max-content);
+            grid-template-areas:
+                "slider slider sometext sometext sometext sometext"
+                "slider slider check check check check";
+            column-gap: 2em;
+            row-gap: 2em;
+        }
+
+        &__slider {
+            grid-area: slider;
+            //width: 32.7%;
+            border: $myBorder;
+        }
+
+        &__text {
+            grid-area: sometext;
+            @include flexy(column, space-between, normal);
+            //width: 56%;
+            gap: 1em;
+            position: relative;
+
+            div {
+                padding-top: 1em;
+
+                &:first-of-type {
+
+                    p {
+                        @include fonty(1rem, 600, 1.36rem);
+                    }
+                }
+
+                &:nth-child(2) {
+                    p {
+                        &:nth-child(2) {
+                            @include fonty(1.09rem, 600, 1.45rem);
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+
+                p {
+                    &:nth-child(2) {
+                        @include fonty(1.09rem, 600, 1.45rem);
+                        padding: 1em 0;
+                    }
+                }
+            }
+
+        }
+
+        &__h3 {
+            @include fonty(1.14rem, 600, 1.55rem);
+            position: absolute;
+            top: -1.5em;
+            left: 0;
+        }
 
 
+        &__list {
+            li {
+                @include fonty(1rem, 400, 1.36rem);
+                position: relative;
+                padding: 1em 0 0 2.5em;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #A289AA;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+
+
+        &__check-in {
+            grid-area: check;
+
+            p {
+                padding: 0.3em 0;
+
+                &:nth-child(2) {
+                    padding-bottom: 2.8em;
+                }
+            }
+
+
+        }
+    }
 }
