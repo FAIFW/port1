@@ -1,5 +1,5 @@
 .die {
-    height: 164px;
+    height: calc(122px + 42 * ((100vw - 320px) / 1920));
     border-radius: 10px;
     background-color: $dieColor;
     @include flexy(column);
@@ -44,10 +44,10 @@
 
     p {
         &:first-of-type {
-            @include fonty(1.18rem, 600, 1.5rem);
+            @include fonty(0.82rem, 600, 1.09rem);
         }
 
-        @include fonty(1rem, 400, 1.3rem);
+        @include fonty(0.73rem, 400, 0.95rem);
         text-align: center;
     }
 

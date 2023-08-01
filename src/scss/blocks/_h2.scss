@@ -1,6 +1,6 @@
 .h2 {
     font-family: 'Constantine';
-    @include fonty(2.18rem, 400, 2.6rem);
+    @include fonty(1.59rem, 400, 1.91rem);
     color: $h2-color;
     text-align: center;
     position: relative;
@@ -25,5 +25,3 @@
         left: 0;
     }
 }
-
-// mixin that will calculate font-size shall be implemented!

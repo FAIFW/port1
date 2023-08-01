@@ -339,6 +339,8 @@ template {
   display: none;
 }
 
+/*---------------------COLORS-------------------------*/
+/*---------------------CALCULATIONS----------------------*/
 @font-face {
   font-family: "Constantine";
   font-weight: 400;
@@ -376,12 +378,26 @@ template {
 }
 
 html {
-  font-size: 16px;
+  font-size: 22px;
 }
 
+@media (max-width: 1750px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media (max-width: 1550px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
 body {
   font-family: "Manrope";
-  font-size: 14px;
   font-weight: 400;
   color: rgb(34, 8, 43);
   background-color: rgb(243, 243, 243);
@@ -403,14 +419,7 @@ h6 {
 
 a {
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 0.875rem;
   color: rgb(34, 8, 43);
-}
-
-.stop-scroll {
-  overflow: hidden;
 }
 
 picture {
@@ -423,6 +432,10 @@ picture img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 .burger {
@@ -528,17 +541,31 @@ picture img {
 .check-in-link {
   text-align: center;
   width: calc(224px + 227 * (100vw - 320px) / 1920);
+  font-size: calc(14px + 11 * (100vw - 320px) / 1920);
   max-width: 451px;
-  padding: 10px;
-  border-radius: 20px;
+  padding: calc(11px + 15 * (100vw - 320px) / 1920) calc(40px + 55 * (100vw - 320px) / 1920);
+  border-radius: 50px;
   background-color: rgb(166, 113, 244);
 }
 
+/*
+.check-in-link {
+    text-align: center;
+    //width: calc(224px + 227 * (100vw - 320px) / 1920);
+    font-size: calc(14px + 11 * ((100vw - 320px) / 1920));
+    //max-width: 451px;
+    //padding: 10px;
+    padding: 1.18em 4.32em;
+    border-radius: 50px;
+    background-color: $check-in-color;
+}
+
+*/
 .h2 {
   font-family: "Constantine";
-  font-size: 2.18rem;
+  font-size: 1.59rem;
   font-weight: 400;
-  line-height: 2.6rem;
+  line-height: 1.91rem;
   color: rgb(0, 0, 0);
   text-align: center;
   position: relative;
@@ -563,7 +590,7 @@ picture img {
 }
 
 .die {
-  height: 164px;
+  height: calc(122px + 42 * (100vw - 320px) / 1920);
   border-radius: 10px;
   background-color: rgba(218, 185, 235, 0.5);
   display: flex;
@@ -607,21 +634,21 @@ picture img {
   padding: 20% 0;
 }
 .die p {
-  font-size: 1rem;
+  font-size: 0.73rem;
   font-weight: 400;
-  line-height: 1.3rem;
+  line-height: 0.95rem;
   text-align: center;
 }
 .die p:first-of-type {
-  font-size: 1.18rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: 1.09rem;
 }
 
 .die-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
   justify-content: space-between;
 }
 
@@ -767,16 +794,15 @@ picture img {
   justify-content: center;
   align-items: center;
 }
-.first__top h2 {
+.first__top .first__h2 {
   font-family: "Intro";
-  font-size: 4rem;
+  font-size: calc(23px + 46 * (100vw - 320px) / 1920);
   color: rgb(166, 113, 244);
 }
 .first__subtitle {
-  font-size: 1rem;
+  font-size: 1.14rem;
   font-weight: 500;
   line-height: 30px;
-  text-align: center;
 }
 .first .girl {
   margin: 0 auto;
@@ -882,15 +908,17 @@ picture img {
   gap: 15px;
 }
 .first__check-in .first__text {
-  font-size: 14px;
+  font-size: 1.14rem;
   font-weight: 400;
-  line-height: 19px;
-  text-align: center;
+  line-height: 30px;
 }
 
 @media (min-width: 768px) {
   .first {
     padding: 60px 0;
+  }
+  .first__top {
+    align-items: flex-start;
   }
   .first__wrapper {
     padding-top: 45px;
@@ -912,7 +940,7 @@ picture img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 .about {
@@ -925,13 +953,13 @@ picture img {
   flex-direction: column;
   justify-content: normal;
   align-items: normal;
-  gap: calc(20px + 50 * (100vw - 1366px) / 554);
 }
 .about__fl-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: normal;
+  padding: 2rem 0;
 }
 .about__images {
   width: 42.6%;
@@ -955,9 +983,9 @@ picture img {
 }
 .about__content {
   width: 47.8%;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.8rem;
+  line-height: 1.36rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -968,11 +996,11 @@ picture img {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 30px;
-  padding-top: 30px;
+  gap: 1.36rem;
+  padding-top: 1rem;
 }
-.about__content .about__text h4 {
-  font-size: 1.56rem;
+.about__content .about__text .about__h3 {
+  font-size: 1.14rem;
   font-weight: 400;
   line-height: 30px;
   display: block;
@@ -994,7 +1022,7 @@ picture img {
   right: 0;
   background: url("../img/about/paint.png") 0% 95%/100% 65% no-repeat;
 }
-.about__content .about__badge h3 {
+.about__content .about__badge p {
   font-family: "Constantine";
   text-transform: uppercase;
   text-align: center;
@@ -1003,11 +1031,14 @@ picture img {
   left: 11%;
   bottom: 26%;
 }
+.about .die-row {
+  padding: 2rem 0;
+}
 .about .about__bottom {
   font-family: "Constantine";
-  font-size: 2.1rem;
+  font-size: 1.45rem;
   font-weight: 400;
-  line-height: 2.63rem;
+  line-height: 1.95rem;
   text-align: center;
   margin: 0 auto;
   width: 85%;
@@ -1026,6 +1057,63 @@ picture img {
   margin: auto;
 }
 
+@media (max-width: 1080px) {
+  .about .die-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .about__content .about__badge {
+    height: 100px;
+    background: none;
+    right: 0;
+    bottom: 0;
+    top: 1.6rem;
+  }
+  .about__content .about__badge::before {
+    height: 70%;
+    background: url("../img/about/paint.png") 100% 100%/100% 100% no-repeat;
+  }
+  .about__content .about__badge p {
+    font-size: 0.8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .about__fl-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about__images {
+    width: initial;
+    height: 55vw;
+    display: flex;
+    gap: 4vw;
+  }
+  .about__images picture:nth-child(3) {
+    display: none;
+  }
+  .about__content {
+    width: initial;
+  }
+  .about .about__bottom {
+    width: 95%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+  }
+}
+@media (max-width: 475px) {
+  .about .die-row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .portfolio .container {
   margin: 0 auto;
   width: 91.4%;
