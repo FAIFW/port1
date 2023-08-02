@@ -104,3 +104,25 @@
 
   return changeFirstSection();
 })();
+
+/*               SLIDER                 */
+
+const swiperPortfolio = new Swiper('.portfolio-bottom__swiper', {
+  //direction: 'horizontal',
+  loop: true,
+  slidesPerView: 1,
+  allowSlideNext: true,
+  allowSlidePrev: true,
+  allowTouchMove: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  speed: 1000,
+  autoplay: {
+    delay: 4000
+  },
+
+  navigation: {
+    nextEl: '.custom-next',
+    prevEl: '.custom-prev',
+  },
+});
