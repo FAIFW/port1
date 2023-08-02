@@ -1151,6 +1151,7 @@ li {
 }
 .portfolio-bottom {
   padding: 5em 0;
+  /*  кнопки - 19й век - заменить на пагинцаию*/
 }
 .portfolio-bottom__grid {
   display: grid;
@@ -1164,6 +1165,35 @@ li {
 .portfolio-bottom__slider {
   grid-area: slider;
   border: 2px solid red;
+}
+.portfolio-bottom__slider .swiper-wrapper {
+  position: relative;
+  padding-bottom: 3em;
+}
+.portfolio-bottom__slider picture {
+  width: 48%;
+}
+.portfolio-bottom__slider picture:nth-child(2) {
+  float: right;
+}
+.portfolio-bottom .swiper-button-prev:after,
+.portfolio-bottom .swiper-button-next:after {
+  content: "";
+}
+.portfolio-bottom .custom-prev,
+.portfolio-bottom .custom-next {
+  top: auto;
+  width: 3em;
+  height: 3em;
+  bottom: 0;
+}
+.portfolio-bottom .custom-prev {
+  background: url("../img/icon/left.svg") center/cover no-repeat;
+  left: calc(50% - 4em);
+}
+.portfolio-bottom .custom-next {
+  background: url("../img/icon/right.svg") center/cover no-repeat;
+  right: calc(50% - 4em);
 }
 .portfolio-bottom__text {
   grid-area: sometext;
